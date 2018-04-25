@@ -1,0 +1,16 @@
+{
+  "name": "_text_grunt_vs_jade",
+  "version": "1.0.0",
+  "title": "Grunt vs Jade",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-livereload": "^0.1.2",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "ruby": "^0.6.1"
+  }
+}

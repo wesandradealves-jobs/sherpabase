@@ -1,0 +1,142 @@
+@charset "utf-8";
+@import url(http://weloveiconfonts.com/api/?family=zocial|entypo);
+
+.flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+}
+
+.stretch{
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;	
+}
+
+@mixin flex($width){
+  -webkit-flex: 0 $width;                
+  -ms-flex: 0 $width;                    
+  flex: 0 $width; 
+}
+
+@mixin transition($tempo){
+  -webkit-transition:all linear $tempo;
+  -moz-transition:all linear $tempo;
+  -o-transition:all linear $tempo;
+  transition:all linear $tempo;
+}
+
+@mixin height($tempo){
+  -webkit-transition:max-height $tempo;
+  -moz-transition:max-height $tempo;
+  -o-transition:max-height $tempo;
+  transition:max-height $tempo;
+}
+
+@mixin border($radius){
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+}
+
+@mixin shadow($val1, $val2, $val3, $val4, $cor){
+  -webkit-box-shadow: $val1 $val2 $val3 $val4 $cor;
+  -moz-box-shadow: $val1 $val2 $val3 $val4 $cor;
+  box-shadow: $val1 $val2 $val3 $val4 $cor;
+}
+
+@mixin background($size){
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    -o-background-size: $size;
+    background-size: $size;
+}
+
+@mixin degrade($color1,$color2){
+  background: $color1; 
+  background: -moz-linear-gradient(top, $color1 0%, $color2 53%, $color2 100%); 
+  background: -webkit-linear-gradient(top, $color1 0%,$color2 53%,$color2 100%); 
+  background: linear-gradient(to bottom, $color1 0%,$color2 53%,$color2 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 ); 
+}
+
+.flex100{@include flex(100%);}
+.flex95{@include flex(95%);}
+.flex90{@include flex(90%);}
+.flex85{@include flex(85%);}
+.flex80{@include flex(80%);}
+.flex75{@include flex(75%);}
+.flex70{@include flex(70%);}
+.flex65{@include flex(65%);}
+.flex60{@include flex(60%);}
+.flex55{@include flex(55%);}
+.flex50{@include flex(50%);}
+.flex45{@include flex(45%);}
+.flex40{@include flex(40%);}
+.flex35{@include flex(35%);}
+.flex33{@include flex(33.333333333%);}
+.flex30{@include flex(30%);}
+.flex25{@include flex(25%);}
+.flex20{@include flex(20%);}
+.flex16{@include flex(16.666666666%);}
+.flex15{@include flex(15%);}
+.flex10{@include flex(10%);}
+
+@mixin order($value){
+  -webkit-box-ordinal-group: $value;
+  -ms-flex-order: $value;
+  -webkit-order: $value;
+  order: $value;  
+}
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+[class*="flex"]{
+  min-width:0;
+  img{
+    position:relative;
+    display:block;
+    margin:0 auto;
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+    min-width:0;
+    align-self: center;
+  }
+}
+
+/****/
+
+@for $i from 1 through 4 {
+    h#{$i} {
+    	line-height:1.3em;
+      	font-weight:normal;
+    }
+}
+
+
+// @media screen and (max-width:1190px){
+
+// }
